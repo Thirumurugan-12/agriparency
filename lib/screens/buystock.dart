@@ -18,7 +18,7 @@ class _BuyStockPageState extends State<BuyStockPage> {
 
   Future<void> createBatch() async {
     final response = await http.post(
-      Uri.parse('https://b990-117-254-38-161.ngrok-free.app/create_batch'),
+      Uri.parse('https://3b4f-117-254-39-20.ngrok-free.app/create_batch'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -39,8 +39,8 @@ class _BuyStockPageState extends State<BuyStockPage> {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Transaction Successful'),
-            content: Text('Transaction is successful and pushed in market',
-                style: TextStyle(color: Colors.black)),
+            content: Text('Transaction is successful and pushed in market\n\nTransaction hash: ${result['transaction_hash']}\nReceipt to: ${result['receipt_to']}',
+                style: TextStyle(color: Colors.white)),
             actions: <Widget>[
               ElevatedButton(
                 child: Text('OK'),

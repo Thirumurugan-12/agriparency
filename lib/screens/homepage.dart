@@ -1,6 +1,7 @@
 // lib/homepage.dart
 import 'package:agriparency/screens/viewpage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Stock {
   final String name;
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Center(child: Text('agriparency' , style: GoogleFonts.manrope())),
       ),
       body: Container(
         padding: EdgeInsets.all(16),
